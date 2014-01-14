@@ -1,5 +1,5 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "Perform homogeneous product",
    "author" : [
       "@gmail.com>"
    ],
@@ -43,7 +43,8 @@
       },
       "runtime" : {
          "requires" : {
-            "perl" : "5.008005"
+            "Clone" : "0",
+            "perl" : "5.008001"
          }
       },
       "test" : {
@@ -53,5 +54,8 @@
       }
    },
    "release_status" : "unstable",
-   "version" : "0.01"
+   "version" : "0.01",
+   "x_contributors" : [
+      "hoto <hoto17296@gmail.com>"
+   ]
 }

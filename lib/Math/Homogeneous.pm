@@ -67,7 +67,7 @@ __END__
 
 =head1 NAME
 
-Math::Homogeneous
+Math::Homogeneous - Perform homogeneous product
 
 =head1 SYNOPSIS
 Function

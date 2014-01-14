@@ -25,3 +25,7 @@ cover_db/
 MYMETA.*
 
 /Math-Homogeneous-*
+/.build
+/_build_params
+!Build/
+!META.json

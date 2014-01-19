@@ -8,7 +8,7 @@ use overload
     '<>' => \&get,
     fallback => 1;
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 our @EXPORT = qw/ homogeneous /;
 our @EXPORT_OK = qw/ homo /;

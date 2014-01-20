@@ -70,7 +70,9 @@ __END__
 Math::Homogeneous - Perform homogeneous product
 
 =head1 SYNOPSIS
-Function
+
+=head2 Function
+
     use Math::Homogeneous;
 
     my @n = qw/ a b c /;
@@ -80,7 +82,8 @@ Function
       print join(',', @$_) . "\n";
     }
 
-output:
+=head3 Output
+    
     a,a
     a,b
     a,c
@@ -91,7 +94,8 @@ output:
     c,b
     c,c
 
-Iterator
+=head2 Iterator
+    
     use Math::Homogeneous;
 
     my @n = qw/ a b c /;
@@ -101,7 +105,8 @@ Iterator
       print join(',', @$_) . "\n";
     }
 
-output:
+=head3 Output
+
     a,a
     a,b
     a,c

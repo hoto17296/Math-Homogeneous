@@ -3,7 +3,9 @@
 Math::Homogeneous - Perform homogeneous product
 
 # SYNOPSIS
-Function
+
+## Function
+
     use Math::Homogeneous;
 
     my @n = qw/ a b c /;
@@ -13,7 +15,9 @@ Function
       print join(',', @$_) . "\n";
     }
 
-output:
+### Output
+    
+
     a,a
     a,b
     a,c
@@ -24,17 +28,21 @@ output:
     c,b
     c,c
 
-Iterator
+## Iterator
+    
+
     use Math::Homogeneous;
 
     my @n = qw/ a b c /;
     my $homo = Math::Homogeneous->new(2, @n);
     
+
     while (<$homo>) {
       print join(',', @$_) . "\n";
     }
 
-output:
+### Output
+
     a,a
     a,b
     a,c

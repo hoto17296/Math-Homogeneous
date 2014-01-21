@@ -5,10 +5,10 @@ use warnings;
 use base 'Exporter';
 use Clone qw/ clone /;
 use overload
-    '<>' => \&_get,
-    fallback => 1;
+  '<>' => \&_get,
+  fallback => 1;
 
-our $VERSION = "0.02";
+our $VERSION = '0.03';
 
 our @EXPORT = qw/ homogeneous /;
 our @EXPORT_OK = qw/ homo /;
@@ -72,50 +72,49 @@ Math::Homogeneous - Perform homogeneous product
 =head1 SYNOPSIS
 
 =head2 Function
+  
+  use Math::Homogeneous;
 
-    use Math::Homogeneous;
-
-    my @n = qw/ a b c /;
-    my $homogeneous = homogeneous(2, @n);
-
-    for (@$h) {
-      print join(',', @$_) . "\n";
-    }
+  my @n = qw/ a b c /;
+  my $homo = homogeneous(2, @n);
+  for (@$homo) {
+    print join(',', @$_) . "\n";
+  }
 
 =head3 Output
     
-    a,a
-    a,b
-    a,c
-    b,a
-    b,b
-    b,c
-    c,a
-    c,b
-    c,c
+  a,a
+  a,b
+  a,c
+  b,a
+  b,b
+  b,c
+  c,a
+  c,b
+  c,c
 
 =head2 Iterator
-    
-    use Math::Homogeneous;
 
-    my @n = qw/ a b c /;
-    my $homo = Math::Homogeneous->new(2, @n);
-    
-    while (<$homo>) {
-      print join(',', @$_) . "\n";
-    }
+  use Math::Homogeneous;
+
+  my @n = qw/ a b c /;
+  my $itr = Math::Homogeneous->new(2, @n);
+  
+  while (<$itr>) {
+    print join(',', @$_) . "\n";
+  }
 
 =head3 Output
 
-    a,a
-    a,b
-    a,c
-    b,a
-    b,b
-    b,c
-    c,a
-    c,b
-    c,c
+  a,a
+  a,b
+  a,c
+  b,a
+  b,b
+  b,c
+  c,a
+  c,b
+  c,c
 
 =head1 DESCRIPTION
 

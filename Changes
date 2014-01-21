@@ -1,5 +1,10 @@
 {{$NEXT}}
 
+0.03 2014-01-21T03:41:57Z
+
+    - Rename private method
+    - Fix indent
+
 0.02 2014-01-19T08:12:24Z
 
     - release!

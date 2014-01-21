@@ -5,7 +5,7 @@ use warnings;
 use base 'Exporter';
 use Clone qw/ clone /;
 use overload
-    '<>' => \&get,
+    '<>' => \&_get,
     fallback => 1;
 
 our $VERSION = "0.02";
@@ -31,7 +31,7 @@ sub homogeneous {
   $return;
 }
 
-sub homo { &homogeneous(@_); }
+sub homo { homogeneous @_ }
 
 sub new {
   my $class = shift;
@@ -44,20 +44,20 @@ sub new {
   bless($iterator, $class);
 }
 
-sub next {
+sub _next {
   my $self = shift;
-  return undef unless $self->has_next;
+  return undef unless $self->_has_next;
   $self->{iteratee}[$self->{current}++];
 }
 
-sub has_next {
+sub _has_next {
   my $self = shift;
   $self->{current} < $self->{length};
 }
 
-sub get {
+sub _get {
   my $self = shift;
-  wantarray ? @{$self->{iteratee}} : $self->next;
+  wantarray ? @{$self->{iteratee}} : $self->_next;
 }
 
 1;

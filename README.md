@@ -36,7 +36,6 @@ Math::Homogeneous - Perform homogeneous product
     my @n = qw/ a b c /;
     my $homo = Math::Homogeneous->new(2, @n);
     
-
     while (<$homo>) {
       print join(',', @$_) . "\n";
     }
